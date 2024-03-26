@@ -5,9 +5,14 @@ import { useContext, useState } from "react"
 import { CartContext } from "../components/contexts/cartContext";
 import { productsProps } from "../types/productsTypes";
 
-const SliderProdutos = () => {
-    const [slides, setSlides] = useState(4)
+const SliderProdutos = ({firstProduct, lastProduct}:any) => {
+
+    const [slides, setSlides] = useState<number>(4)
     const { cart, setCart } = useContext(CartContext)
+
+    console.log(firstProduct);
+    console.log(lastProduct);
+    
 
     window.addEventListener('load', () => {
         const widthFixed = screen.width
@@ -64,7 +69,7 @@ const SliderProdutos = () => {
                 >
                     {
                         products
-                            .slice(4, 10)
+                            .slice(firstProduct, lastProduct)
                             .map((product) =>
                                 <SwiperSlide className="rounded-md justify-center w-max" key={product.id}>
                                     <div className="bg-[#F9F9F9] rounded-md  p-3 sm:p-4 w-max my-0 mx-auto flex flex-col justify-between">

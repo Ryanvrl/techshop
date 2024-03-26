@@ -1,30 +1,44 @@
-# React + TypeScript + Vite
+# e-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
+    Esse é um projeto de um e-commerce usando React, TypeScript e Tailwind. single-page application (SPA).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+- Adiciona itens no carrinho.
+- Filtra itens.
+- Busca por informações do CEP informado.
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Tailwind: Estilizar com maior dinamismo.
+- React Router: Usada para facilitar a navegação dentro da aplicação.
+- ViaCEP: Usada para buscar CEP.
+- Context API: Adicionando contexto para o carrinho e endereço.
 
-- Configure the top-level `parserOptions` property like this:
+## Gifs
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Navegação, filtragem, CEP e carrinho 
+<img src="./src/assets/navegacaoTech.gif" alt="gif">
+<img src="./src/assets/cepTech.gif" alt="gif">
+
+## Como utilizar
+
+### clone do projeto
+```
+    git clone https://github.com/Ryanvrl/techshop.git
+
+### Acessar a pasta
+```
+    cd "projeto"
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Instalação
+```
+    npm install
+```
+
+### Começar
+```
+    npm start
+```

@@ -126,8 +126,8 @@ const AllProduts = () => {
       <div className="flex flex-col justify-center items-center">
         <Header />
         <section className="bg-secondary-bg w-full">
-          <h2 className="text-center py-5 font-bold text-3xl">Mais vendidos</h2>
-          <SliderProdutos />
+          <h2 className="text-center py-5 font-bold text-3xl">Novidades</h2>
+          <SliderProdutos firstProduct={12} lastProduct={18}/>
 
           <h2 className="text-center mt-[32px] font-bold text-3xl bg-color-logo p-2 text-white">Todos os produtos</h2>
 

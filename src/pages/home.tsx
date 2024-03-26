@@ -11,7 +11,7 @@ const Home = () => {
             <SliderMain />
             <main className="flex flex-col bg-secondary-bg pb-5 w-full">
                 <h1 className="text-4xl font-bold text-center my-5">Destaques</h1>
-                <SliderProdutos />
+                <SliderProdutos firstProduct={4} lastProduct={11}/>
             </main>
             <FooterDefault />
         </div>
