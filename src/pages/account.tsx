@@ -3,6 +3,8 @@ import FooterDefault from '../components/footerDefault'
 import Header from '../components/header'
 import { AdressContext } from '../components/contexts/adressContext'
 import imgPerfil from '../assets/foto-perfil.png'
+import { FavoritesContext } from '../components/contexts/favoritesContext'
+import ProductCard from '../components/productCard'
 
 const getNameFromLocalStore = () => {
     if (localStorage.getItem('name') == null) {
@@ -17,14 +19,14 @@ const Account = () => {
     const { cep } = useContext(AdressContext)
     const [name, setName] = useState(getNameFromLocalStore)
     const [valueInput, setValueInput] = useState<string | null>(null)
+    const { favorites } = useContext(FavoritesContext)
 
-    const handlePressEnter = (e: React.KeyboardEvent) => {   
+    const handlePressEnter = (e: React.KeyboardEvent) => {
         if (e.key == 'Enter') {
-            setName(valueInput)       
+            setName(valueInput)
         }
     }
-
-
+    console.log(favorites);
 
 
     localStorage.setItem("name", JSON.stringify(name))
@@ -39,7 +41,7 @@ const Account = () => {
                         {name == null &&
                             <div className='m-7'>
 
-                                <input type="text" placeholder='Digite seu nome' className='p-1 rounded-md' maxLength={20} onChange={(e) => setValueInput(e.target.value)} id='name-input' onKeyUp={handlePressEnter}/>
+                                <input type="text" placeholder='Digite seu nome' className='p-1 rounded-md' maxLength={20} onChange={(e) => setValueInput(e.target.value)} id='name-input' onKeyUp={handlePressEnter} />
 
                                 <button className='bg-green-500 ml-1 text-white p-1 rounded-md' onClick={() => setName(valueInput)}>Confirmar</button>
                             </div>
@@ -53,9 +55,7 @@ const Account = () => {
                         }
                     </div>
 
-
                 </div>
-
                 <div className='flex flex-col justify-center items-center'>
                     <h3 className='text-center font-bold text-3xl'>Endereço</h3>
                     {cep.logradouro != '' &&
@@ -73,10 +73,32 @@ const Account = () => {
                         </div>
                     }
                 </div>
-            </main>
 
-            <FooterDefault />
+                <div className='flex flex-col justify-center items-center'>
+                    <h3 className='text-center font-bold text-3xl my-9'>Favoritos</h3>
+
+                    {favorites.length > 0 &&
+                        <div className='grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-4'>
+                            {favorites
+                                .map((product: any) =>
+                                    <div className='' key={product.id}>
+                                        <ProductCard product={product} key={product.id} />
+                                    </div>
+                                )}
+                        </div>
+                    }
+
+                    {favorites.length == 0 &&
+                        <div className='flex justify-center items-center'>
+                            <p>Nenhum produto selecionado como favorito 😭</p>
+                        </div>
+                    }
+                
         </div>
+            </main >
+
+    <FooterDefault />
+        </div >
     )
 }
 export default Account

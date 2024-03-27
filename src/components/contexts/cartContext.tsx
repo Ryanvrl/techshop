@@ -3,8 +3,6 @@ import { productsProps } from "../../types/productsTypes";
 
 const CartContext = createContext<any>([])
 
-
-
 const getCartFromLocalStore = () => {
     if (localStorage.getItem('cart') == null) {
         let cart: productsProps[] = []

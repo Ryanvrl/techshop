@@ -1,6 +1,7 @@
 import './App.css'
 import { AdressProvider } from './components/contexts/adressContext'
 import { CartProvider } from './components/contexts/cartContext'
+import { FavoritesProvider } from './components/contexts/favoritesContext'
 import { AppRoutes } from './routes/routes'
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <>
       <CartProvider>
         <AdressProvider>
-          <AppRoutes />
+          <FavoritesProvider>
+            <AppRoutes />
+          </FavoritesProvider>
         </AdressProvider>
       </CartProvider>
     </>

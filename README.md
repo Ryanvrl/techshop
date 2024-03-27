@@ -18,9 +18,11 @@
 
 ## Gifs
 
-### Navegação, filtragem, CEP e carrinho 
+### Navegação, filtragem, CEP, carrinho e favoritos
 <img src="./src/assets/navegacaoTech.gif" alt="gif">
 <img src="./src/assets/cepTech.gif" alt="gif">
+<img src="./src/assets/techfav.gif" alt="gif">
+
 
 ## Como utilizar
 
