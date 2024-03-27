@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { productsProps } from "../../types/productsTypes";
+import { productsProps } from "../../types/types";
 
 const CartContext = createContext<any>([])
 

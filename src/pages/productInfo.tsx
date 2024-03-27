@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react"
 import { FaHeart } from "react-icons/fa6"
 import { CiHeart } from "react-icons/ci"
 import { FavoritesContext } from "../components/contexts/favoritesContext"
-import { productsProps } from "../types/productsTypes"
+import { productsProps } from "../types/types"
 import { CartContext } from "../components/contexts/cartContext"
 
 const ProductInfo = () => {

@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { cepProps } from "../../types/productsTypes";
+import { cepProps } from "../../types/types";
 
 const AdressContext = createContext<any>([])
 

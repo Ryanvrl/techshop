@@ -3,7 +3,7 @@ import { FaCartPlus } from "react-icons/fa6"
 import { products } from "../data/productsData"
 import { useContext, useState } from "react"
 import { CartContext } from "../components/contexts/cartContext";
-import { productsProps } from "../types/productsTypes";
+import { productsProps } from "../types/types";
 import { Link } from "react-router-dom";
 
 const SliderProdutos = ({ firstProduct, lastProduct }: any) => {

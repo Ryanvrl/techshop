@@ -26,9 +26,7 @@ const Account = () => {
             setName(valueInput)
         }
     }
-    console.log(favorites);
-
-
+ 
     localStorage.setItem("name", JSON.stringify(name))
     return (
         <div className='flex flex-col justify-center items-center'>

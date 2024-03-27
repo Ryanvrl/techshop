@@ -18,7 +18,7 @@ import headsetRazer from '../assets/headsetRazer.png'
 import headsetAstro from '../assets/headsetAstro.png'
 import roboEletrolux from '../assets/roboaspiradorEletrolux.png'
 import tecladoRedragon from '../assets/tecladoRedragon.png'
-import { productsProps } from '../types/productsTypes'
+import { productsProps } from '../types/types'
 
 
 
