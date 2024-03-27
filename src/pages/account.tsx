@@ -89,7 +89,7 @@ const Account = () => {
                     }
 
                     {favorites.length == 0 &&
-                        <div className='flex justify-center items-center'>
+                        <div className='flex justify-center items-center pb-6'>
                             <p>Nenhum produto selecionado como favorito 😭</p>
                         </div>
                     }
